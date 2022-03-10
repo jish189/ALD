@@ -14,17 +14,19 @@ import pandas as pd
 
 doi = '10.1021/acs.chemmater.5b00255'
 ab = AbstractRetrieval(doi, view='FULL')
-print(ab.authors)
-for author in ab.authors:
-    print(author.indexed_name)
+# print(ab.authors)
+
+
+#for author in ab.authors:
+#    print(author.indexed_name)
 # from urllib.parse import urlparse
 # print(urlparse(ab.citedby_link, allow_fragments=True))
 citation_query = ab.citedby_link.split('&')[-2].split('=')[1]
-print(citation_query)
+#print(citation_query)
 file = ScopusSearch(citation_query)
 # print(file)
-for item in file.results:
-    print(item.eid)
+#for item in file.results:
+#    print(item.eid)
 
 # reference_term = ab.citedby_link[]
 # id = ab.eid

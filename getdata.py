@@ -18,7 +18,7 @@ def getCitations(paperID,num_year):
     return citation_count 
 
 
-if "__name__" == "__main__":
+if __name__ == "__main__":
     #get nobel price wining paper data 
     data1 = pd.read_csv("Chemistry publication record.csv",encoding= "ISO-8859-1")
     data2 = pd.read_csv("Physics publication record.csv",encoding= "ISO-8859-1")
